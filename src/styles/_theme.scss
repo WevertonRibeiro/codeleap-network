@@ -1,0 +1,10 @@
+@use "./tokens" as *;
+
+:root {
+  --background-color: #{$color-light-gray};
+
+  --font-family-base: #{$font-family-roboto};
+
+  --font-weight-body: #{$font-weight-regular};
+  --font-weight-heading: #{$font-weight-bold};
+}
