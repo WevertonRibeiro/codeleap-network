@@ -1,10 +1,16 @@
 // COLORS
-$color-light-blue: #7695ec;
 $color-white: #ffffff;
 $color-black: #000000;
-$color-gray: #999999;
-$color-light-gray: #dddddd;
-$color-dark-gray: #777777;
+
+$color-blue: #7695ec;
+$color-blue-light: #88a7ff;
+
+$color-red: #ff5151;
+$color-green: #47b960;
+
+$color-gray: #cccccc;
+$color-gray-light: #dddddd;
+$color-gray-dark: #777777;
 
 // SPACING
 $space-sm: 10px;
@@ -22,8 +28,12 @@ $font-family-roboto: "Roboto", sans-serif;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
-$font-size-50: 14px;
-$font-size-100: 16px;
-$font-size-200: 18px;
-$font-size-300: 20px;
-$font-size-400: 22px;
+$text-xs: 14px; // 12px
+$text-sm: 0.875rem; // 14px
+$text-md: 1rem; // 16px
+$text-lg: 1.125rem; // 18px
+$text-xl: 1.25rem; // 20px
+$text-2xl: 1.375rem; // 22px
+
+// CONTAINER
+$container-width: 800px;

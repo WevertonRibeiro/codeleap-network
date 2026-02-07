@@ -1,0 +1,5 @@
+@import "@/styles/mixins";
+
+.TextArea {
+  @include field-base;
+}
