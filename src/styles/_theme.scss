@@ -1,10 +1,61 @@
 @use "./tokens" as *;
 
 :root {
-  --background-color: #{$color-light-gray};
+  --bg-app-base: #{$color-gray-light};
+  --bg-surface: #{$color-white};
+  --bg-header-brand: #{$color-blue};
 
-  --font-family-base: #{$font-family-roboto};
+  --font-base: #{$font-family-roboto};
 
-  --font-weight-body: #{$font-weight-regular};
-  --font-weight-heading: #{$font-weight-bold};
+  --border-style: 1px solid;
+  --content-radius: #{$radius-lg};
+
+  // Text Colors
+  --text-primary: #{$color-black};
+  --text-secondary: #{$color-gray-dark};
+  --text-inverted: #{$color-white};
+  --text-on-brand: #{$color-white};
+
+  // Text Sizes
+  --title-page: #{$text-2xl};
+  --title-modal: #{$text-xl};
+  --title-post: #{$text-lg};
+  --text-body: #{$text-md};
+  --text-label: #{$text-md};
+  --text-meta: #{$text-lg};
+  --text-button: #{$text-md};
+  --text-placeholder: #{$color-gray};
+  --text-input: #{$text-xs};
+
+  --weight-title-page: #{$font-weight-bold};
+  --weight-body: #{$font-weight-regular};
+
+  // Paddings
+  --padding-inline-lg: #{$space-lg};
+  --padding-block-lg: #{$space-lg};
+
+  // Actions
+  --action-primary: #{$color-blue};
+  --action-primary-hover: #{$color-blue-light};
+
+  --action-success: #{$color-green};
+  --action-danger: #{$color-red};
+
+  --action-text-weight: #{$font-weight-bold};
+
+  --action-radius: #{$radius-md};
+
+  // Inputs
+  --input-bg: var(--bg-surface);
+  --input-text: var(--text-primary);
+  --input-placeholder: var(--text-placeholder);
+
+  --input-border-color: #{$color-gray-dark};
+  --input-border-focus: var(--action-primary);
+
+  --input-radius: #{$radius-md};
+  --input-padding: 0.5rem 0.75rem;
+
+  // Container
+  --max-width-container: #{$container-width};
 }
