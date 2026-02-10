@@ -1,0 +1,29 @@
+@use "@/styles/theme";
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.required {
+  color: var(--error-color, #ef4444);
+  margin-left: 0.25rem;
+}
+
+.input {
+  width: 100%;
+}
+
+.error {
+  font-size: var(--text-xs);
+  color: var(--error-color, #ef4444);
+  margin-top: 0.25rem;
+}

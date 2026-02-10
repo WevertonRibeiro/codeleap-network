@@ -1,5 +1,6 @@
 @mixin field-base {
   width: 100%;
+  max-width: 100%;
   background-color: var(--input-bg);
   border: var(--border-style) var(--input-border-color);
   border-radius: var(--input-radius);
