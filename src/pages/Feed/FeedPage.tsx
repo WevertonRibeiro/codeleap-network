@@ -1,3 +1,5 @@
+import { usePosts, useCreatePost } from "@/features/post/hooks/usePosts";
+
 import { Container } from "@/components/layout/Container/Container";
 import { Card } from "@/components/ui/Card/Card";
 import { Form } from "@/components/forms/Form/Form";
@@ -6,17 +8,24 @@ import { TextField } from "@/components/forms/Form/TextField/TextField";
 import { TextArea } from "@/components/forms/Form/TextArea/TextArea";
 import { Button } from "@/components/ui/Button/Button";
 
+import type { CreatePostDTO } from "@/features/post/types/post.types";
+
 import styles from "./styles.module.scss";
 
-interface FormValues {
-  title: string;
-  content: string;
-}
-
 export function FeedPage() {
-  function onFinish(values: FormValues) {
-    console.log(values);
-  }
+  const { data, isLoading } = usePosts();
+  const { mutate, isPending } = useCreatePost();
+
+  if (isLoading) return <span>Loading...</span>;
+
+  const onFinish = (values: CreatePostDTO) => {
+    const data = {
+      username: "Tom",
+      title: values?.title,
+      content: values?.content,
+    };
+    mutate(data);
+  };
 
   return (
     <Container className={styles.feedPage}>
@@ -36,6 +45,9 @@ export function FeedPage() {
           <Button type="submit" title="Create" handleClick={() => {}} />
         </Form>
       </Card>
+      {data?.posts?.map((post) => (
+        <div key={post.id}>{post.title}</div>
+      ))}
     </Container>
   );
 }
