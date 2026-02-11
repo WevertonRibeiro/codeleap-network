@@ -10,6 +10,7 @@
   --border-style: 1px solid;
   --border-color: #{$color-gray-dark};
   --content-radius: #{$radius-lg};
+  --overlay: rgba(0, 0, 0, 0.1);
 
   --gap-base: #{$space-lg};
 
@@ -21,7 +22,7 @@
 
   // Text Sizes
   --title-page: #{$text-2xl};
-  --title-modal: #{$text-xl};
+  --title-modal: #{$text-2xl};
   --title-card: #{$text-2xl};
   --text-body: #{$text-md};
   --text-label: #{$text-md};
@@ -32,6 +33,7 @@
 
   --weight-title-page: #{$font-weight-bold};
   --weight-title-card: #{$font-weight-bold};
+  --weight-title-modal: #{$font-weight-bold};
   --weight-meta: #{$font-weight-bold};
   --weight-body: #{$font-weight-regular};
 

@@ -24,6 +24,7 @@ export function Form<T extends FieldValues>({
 }: FormProps<T>) {
   const methods = useForm({
     defaultValues: initialValues,
+    mode: "onChange",
   });
 
   return (

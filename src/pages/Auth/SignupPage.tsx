@@ -1,28 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { WelcomeModal } from "@/features/auth/components/WelcomeModal/WelcomeModal";
 
 export function SignupPage() {
-  const [username, setUsername] = useState("");
-  const navigate = useNavigate();
+  const [open, setOpen] = useState(true);
 
-  function handleEnter() {
-    localStorage.setItem("username", username);
-    navigate("/feed");
-  }
-
-  return (
-    <div>
-      <h1>Welcome to CodeLeap network!</h1>
-
-      <input
-        placeholder="Enter your username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-
-      <button disabled={!username} onClick={handleEnter}>
-        ENTER
-      </button>
-    </div>
-  );
+  return <WelcomeModal open={open} onClose={() => setOpen(false)} />;
 }
