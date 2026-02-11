@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+
+  h3 {
+    font-size: var(--title-modal);
+    font-weight: var(--weight-title-modal);
+  }
+}

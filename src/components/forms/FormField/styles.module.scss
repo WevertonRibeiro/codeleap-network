@@ -1,16 +1,15 @@
 @use "@/styles/theme";
 
 .formField {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
   width: 100%;
 }
 
 .label {
-  font-size: var(--text-sm);
+  display: block;
+  font-size: var(--text-label);
   font-weight: 600;
   color: var(--text-primary);
+  margin-bottom: 0.5rem;
 }
 
 .required {

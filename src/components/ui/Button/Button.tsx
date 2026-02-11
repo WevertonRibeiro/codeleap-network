@@ -4,7 +4,7 @@ type ButtonProps = {
   title: string;
   type?: "submit" | "button";
   disabled?: boolean;
-  handleClick: (e?: React.MouseEvent<HTMLButtonElement>) => void;
+  handleClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export function Button({
