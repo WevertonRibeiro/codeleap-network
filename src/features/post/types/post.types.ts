@@ -4,6 +4,7 @@ export interface PostDTO {
   created_datetime: string;
   title: string;
   content: string;
+  author_ip: string;
 }
 
 export interface PostsResponseDTO {
@@ -25,6 +26,7 @@ export interface Post {
   createdAt: Date;
   title: string;
   content: string;
+  authorIp: string;
 }
 
 export interface PaginatedPosts {

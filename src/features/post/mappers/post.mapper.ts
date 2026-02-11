@@ -7,5 +7,6 @@ export function mapPost(dto: PostDTO): Post {
     title: dto.title,
     content: dto.content,
     createdAt: new Date(dto.created_datetime),
+    authorIp: dto.author_ip,
   };
 }
