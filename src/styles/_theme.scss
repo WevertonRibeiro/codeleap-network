@@ -3,12 +3,15 @@
 :root {
   --bg-app-base: #{$color-gray-light};
   --bg-surface: #{$color-white};
-  --bg-header-brand: #{$color-blue};
+  --bg-brand: #{$color-blue};
 
   --font-base: #{$font-family-roboto};
 
   --border-style: 1px solid;
+  --border-color: #{$color-gray-dark};
   --content-radius: #{$radius-lg};
+
+  --gap-base: #{$space-lg};
 
   // Text Colors
   --text-primary: #{$color-black};
@@ -19,7 +22,7 @@
   // Text Sizes
   --title-page: #{$text-2xl};
   --title-modal: #{$text-xl};
-  --title-post: #{$text-lg};
+  --title-card: #{$text-2xl};
   --text-body: #{$text-md};
   --text-label: #{$text-md};
   --text-meta: #{$text-lg};
@@ -28,11 +31,14 @@
   --text-input: #{$text-xs};
 
   --weight-title-page: #{$font-weight-bold};
+  --weight-title-card: #{$font-weight-bold};
   --weight-body: #{$font-weight-regular};
 
   // Paddings
   --padding-inline-lg: #{$space-lg};
   --padding-block-lg: #{$space-lg};
+
+  --header-card-padding: #{space-lg};
 
   // Actions
   --action-primary: #{$color-blue};

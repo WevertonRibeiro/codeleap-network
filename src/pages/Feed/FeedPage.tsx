@@ -29,7 +29,11 @@ export function FeedPage() {
 
   return (
     <Container className={styles.feedPage}>
-      <Card>
+      <Card
+        title="What’s on your mind?"
+        type="secondary"
+        className={styles.cardCreateWrapper}
+      >
         <Form
           initialValues={{ title: "teste", content: "" }}
           onSubmit={onFinish}
@@ -45,9 +49,13 @@ export function FeedPage() {
           <Button type="submit" title="Create" handleClick={() => {}} />
         </Form>
       </Card>
-      {data?.posts?.map((post) => (
-        <div key={post.id}>{post.title}</div>
-      ))}
+      <div className={styles.postsList}>
+        {data?.posts?.map((post) => (
+          <Card title={post.title}>
+            <div key={post.id}>{post.content}</div>
+          </Card>
+        ))}
+      </div>
     </Container>
   );
 }

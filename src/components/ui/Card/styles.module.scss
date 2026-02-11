@@ -1,6 +1,36 @@
-.card {
+.cardWrapper {
   width: 100%;
   background: var(--bg-surface);
-  border: var(--border-style);
   border-radius: var(--content-radius);
+  .cardHeader {
+    border-radius: var(--content-radius) var(--content-radius) 0 0;
+    background: var(--bg-brand);
+    padding-inline: var(--padding-inline-lg);
+    padding-block: var(--padding-block-lg);
+    h2 {
+      font-size: var(--title-card);
+      font-weight: var(--weight-title-card);
+      color: var(--text-on-brand);
+    }
+  }
+  .cardBody {
+    border: var(--border-style) var(--border-color);
+    border-top: unset;
+    border-radius: 0 0 var(--content-radius) var(--content-radius);
+  }
+  &.primary {
+  }
+  &.secondary {
+    border: var(--border-style) var(--border-color);
+    .cardHeader {
+      background: transparent;
+      padding-bottom: 0;
+      h2 {
+        color: var(--text-primary);
+      }
+    }
+    .cardBody {
+      border: unset;
+    }
+  }
 }

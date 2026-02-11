@@ -1,3 +1,13 @@
 .feedPage {
   background: var(--bg-surface);
 }
+
+.cardCreateWrapper {
+  margin-bottom: var(--gap-base);
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
