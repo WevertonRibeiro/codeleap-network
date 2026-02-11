@@ -32,13 +32,15 @@
 
   --weight-title-page: #{$font-weight-bold};
   --weight-title-card: #{$font-weight-bold};
+  --weight-meta: #{$font-weight-bold};
   --weight-body: #{$font-weight-regular};
 
-  // Paddings
+  // spaces
   --padding-inline-lg: #{$space-lg};
   --padding-block-lg: #{$space-lg};
 
-  --header-card-padding: #{space-lg};
+  --header-card-padding: #{$space-lg};
+  --text-margin: #{$space-md};
 
   // Actions
   --action-primary: #{$color-blue};

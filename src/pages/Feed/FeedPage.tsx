@@ -8,6 +8,8 @@ import { TextField } from "@/components/forms/Form/TextField/TextField";
 import { TextArea } from "@/components/forms/Form/TextArea/TextArea";
 import { Button } from "@/components/ui/Button/Button";
 
+import { timeAgo } from "@/utils/timeAgo";
+
 import type { CreatePostDTO } from "@/features/post/types/post.types";
 
 import styles from "./styles.module.scss";
@@ -51,8 +53,14 @@ export function FeedPage() {
       </Card>
       <div className={styles.postsList}>
         {data?.posts?.map((post) => (
-          <Card title={post.title}>
-            <div key={post.id}>{post.content}</div>
+          <Card key={post.id} title={post.title}>
+            <div className={styles.postMeta}>
+              <div className={styles.author}>
+                <span>{`@${post.username}`}</span>
+              </div>
+              <div className={styles.created}>{timeAgo(post.createdAt)}</div>
+            </div>
+            <div className={styles.postContent}>{post.content}</div>
           </Card>
         ))}
       </div>
