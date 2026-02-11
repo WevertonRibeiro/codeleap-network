@@ -9,6 +9,6 @@
 .headerWrapper {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: var(--header-height);
   background: var(--bg-brand);
 }

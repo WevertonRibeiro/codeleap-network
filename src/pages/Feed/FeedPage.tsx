@@ -7,6 +7,7 @@ import { FormField } from "@/components/forms/FormField/FormField";
 import { TextField } from "@/components/forms/Form/TextField/TextField";
 import { TextArea } from "@/components/forms/Form/TextArea/TextArea";
 import { Button } from "@/components/ui/Button/Button";
+import { EmptyState } from "@/components/ui/EmptyState/EmptyState";
 
 import { timeAgo } from "@/utils/timeAgo";
 
@@ -16,9 +17,11 @@ import styles from "./styles.module.scss";
 
 export function FeedPage() {
   const { data, isLoading } = usePosts();
-  const { mutate, isPending } = useCreatePost();
+  const { mutate } = useCreatePost();
 
-  if (isLoading) return <span>Loading...</span>;
+  const posts = data?.posts ?? [];
+  const isEmpty = !isLoading && posts.length === 0;
+  const hasPosts = posts.length > 0;
 
   const onFinish = (values: CreatePostDTO) => {
     const data = {
@@ -51,19 +54,28 @@ export function FeedPage() {
           <Button type="submit" title="Create" handleClick={() => {}} />
         </Form>
       </Card>
-      <div className={styles.postsList}>
-        {data?.posts?.map((post) => (
-          <Card key={post.id} title={post.title}>
-            <div className={styles.postMeta}>
-              <div className={styles.author}>
-                <span>{`@${post.username}`}</span>
+      {isLoading && <span>Carregando...</span>}
+      {isEmpty && (
+        <EmptyState
+          title="No posts yet."
+          description="Be the first to share something 🚀"
+        />
+      )}
+      {hasPosts && (
+        <div className={styles.postsList}>
+          {data?.posts?.map((post) => (
+            <Card key={post.id} title={post.title}>
+              <div className={styles.postMeta}>
+                <div className={styles.author}>
+                  <span>{`@${post.username}`}</span>
+                </div>
+                <div className={styles.created}>{timeAgo(post.createdAt)}</div>
               </div>
-              <div className={styles.created}>{timeAgo(post.createdAt)}</div>
-            </div>
-            <div className={styles.postContent}>{post.content}</div>
-          </Card>
-        ))}
-      </div>
+              <div className={styles.postContent}>{post.content}</div>
+            </Card>
+          ))}
+        </div>
+      )}
     </Container>
   );
 }

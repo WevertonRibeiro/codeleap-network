@@ -1,5 +1,6 @@
 .feedPage {
   background: var(--bg-surface);
+  min-height: calc(101vh - var(--header-height));
 }
 
 .cardCreateWrapper {
