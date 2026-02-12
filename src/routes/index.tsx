@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "@/layouts/AppLayout/AppLayout";
+import { ProtectedRoutes } from "./ProtectedRoutes";
 import { SignupPage } from "@/pages/Auth/SignupPage";
 import { FeedPage } from "@/pages/Feed/FeedPage";
 
@@ -8,8 +9,10 @@ export function AppRouter() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SignupPage />} />
-        <Route element={<AppLayout />}>
-          <Route path="/feed" element={<FeedPage />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route element={<AppLayout />}>
+            <Route path="/feed" element={<FeedPage />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

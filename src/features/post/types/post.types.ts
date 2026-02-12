@@ -20,6 +20,10 @@ export interface CreatePostDTO {
   content: string;
 }
 
+export interface DeletePostDTO {
+  id: number;
+}
+
 export interface Post {
   id: number;
   username: string;

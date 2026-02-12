@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 import { Container } from "@/components/layout/Container/Container";
 
@@ -8,7 +8,7 @@ type CardProps = {
   title?: string;
   type?: "primary" | "secondary";
   children: ReactNode;
-  header?: ReactNode;
+  header?: ReactElement;
   className?: string;
 };
 
