@@ -1,0 +1,30 @@
+.feedPage {
+  background: var(--bg-surface);
+  min-height: calc(101vh - var(--header-height));
+}
+
+.cardCreateWrapper {
+  margin-bottom: var(--gap-base);
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+
+.postMeta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--text-margin);
+  color: var(--text-secondary);
+  font-size: var(--text-meta);
+  .author {
+    font-weight: var(--weight-meta);
+  }
+  .postContent {
+    font-size: var(--text-body);
+  }
+}

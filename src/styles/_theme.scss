@@ -1,0 +1,77 @@
+@use "./tokens" as *;
+
+:root {
+  --bg-app-base: #{$color-gray-light};
+  --bg-surface: #{$color-white};
+  --bg-brand: #{$color-blue};
+
+  --font-base: #{$font-family-roboto};
+
+  --border-style: 1px solid;
+  --border-color: #{$color-gray-dark};
+  --content-radius: #{$radius-lg};
+  --overlay: rgba(119, 119, 119, 0.8);
+
+  --gap-base: #{$space-lg};
+
+  // Text Colors
+  --text-primary: #{$color-black};
+  --text-secondary: #{$color-gray-dark};
+  --text-inverted: #{$color-white};
+  --text-on-brand: #{$color-white};
+
+  // Text Sizes
+  --title-page: #{$text-2xl};
+  --title-modal: #{$text-2xl};
+  --title-card: #{$text-2xl};
+  --text-body: #{$text-md};
+  --text-label: #{$text-md};
+  --text-meta: #{$text-lg};
+  --text-button: #{$text-md};
+  --text-placeholder: #{$color-gray};
+  --text-input: #{$text-xs};
+
+  --weight-title-page: #{$font-weight-bold};
+  --weight-title-card: #{$font-weight-bold};
+  --weight-title-modal: #{$font-weight-bold};
+  --weight-meta: #{$font-weight-bold};
+  --weight-body: #{$font-weight-regular};
+
+  // spaces
+  --padding-inline-lg: #{$space-lg};
+  --padding-block-lg: #{$space-lg};
+
+  --header-card-padding: #{$space-lg};
+  --text-margin: #{$space-md};
+
+  // Actions
+  --action-primary: #{$color-blue};
+  --action-primary-hover: #{$color-blue-light};
+
+  --action-success: #{$color-green};
+
+  --action-danger: #{$color-red};
+  --action-danger-hover: #{$color-red-light};
+
+  --action-default-hover: #f5f5f5;
+
+  --action-text-weight: #{$font-weight-bold};
+
+  --action-radius: #{$radius-md};
+
+  // Inputs
+  --input-bg: var(--bg-surface);
+  --input-text: var(--text-primary);
+  --input-placeholder: var(--text-placeholder);
+
+  --input-border-color: #{$color-gray-dark};
+  --input-border-focus: var(--action-primary);
+
+  --input-radius: #{$radius-md};
+  --input-padding: 0.5rem 0.75rem;
+
+  // Container
+  --max-width-container: #{$container-width};
+
+  --header-height: 80px;
+}

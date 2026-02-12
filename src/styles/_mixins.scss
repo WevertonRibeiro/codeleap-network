@@ -1,0 +1,26 @@
+@mixin field-base {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--input-bg);
+  border: var(--border-style) var(--input-border-color);
+  border-radius: var(--input-radius);
+
+  font-size: var(--text-input);
+  color: var(--input-text);
+
+  padding: var(--input-padding);
+
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--input-border-focus);
+  }
+
+  &:disabled {
+    background-color: var(--bg-app-base);
+    cursor: not-allowed;
+  }
+}

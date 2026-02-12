@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  background: var(--bg-brand);
+}
