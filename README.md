@@ -1,73 +1,121 @@
-# React + TypeScript + Vite
+# 🚀 CodeLeap Network – Frontend Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend implementation of the **CodeLeap Network** recruitment challenge.
 
-Currently, two official plugins are available:
+This project simulates a simple social feed where users can create, edit and delete posts.  
+The interface strictly follows the design specifications provided in the assessment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live Demo:** https://codeleap-network-challenge.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Overview
 
-## Expanding the ESLint configuration
+The goal of this challenge was to build a clean, user-friendly interface targeted at end users.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Users can:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Enter a username
+- Create posts with title and content
+- View posts in a feed
+- Edit posts
+- Delete posts with confirmation
+- See loading and empty states
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The project focuses on:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Clean UI
+- Usability
+- Consistency
+- Performance
+- Code organization
+
+---
+
+## 🖥 Screenshots
+
+### 🔐 Login Screen
+![Login Screen](./screenshots/login.png)
+
+### 📰 Feed Screen
+![Feed Screen](./screenshots/feed.png)
+
+---
+
+## ⚡ Features
+
+- Username entry modal
+- Post creation form
+- Edit post functionality
+- Delete post with confirmation modal
+- Optimistic UI updates using cache manipulation
+- Loading states
+- Empty states
+- Responsive layout
+- Component-based architecture
+
+---
+
+## 🛠 Tech Stack
+
+- **React**
+- **TypeScript**
+- **TanStack React Query**
+- **React Hook Form**
+- **SCSS Modules**
+- **Vite**
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone repository
+
+```bash
+git clone https://github.com/WevertonRibeiro/codeleap-network.git
+```
+```bash
+cd codeleap-network
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3️⃣ Run project
+
+```bash
+npm run dev
+```
+
+### Open browser at:
+
+```bash
+http://localhost:5173
+```
+
+### 🧠 Architecture
+
+```bash
+src/
+├── components/        # Reusable UI components
+├── features/          # Feature-based modules (posts)
+├── hooks/             # Custom hooks
+├── contexts/          # Global state (username)
+├── pages/             # Route pages
+├── utils/             # Helpers
+└── styles/            # Global styles
+```
+
+### 🔮 Possible Improvements
+
+- Pagination or infinite scroll
+- Authentication system
+- Real-time updates (WebSocket)
+- Unit & integration tests
+- Dark mode
+
+### 👨‍💻 Author
+Developed as part of a Frontend Recruitment Challenge.

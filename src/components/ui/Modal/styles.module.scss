@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  padding: var(--gap-base);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.modal {
+  width: 100%;
+  background: var(--bg-surface);
+  border-radius: var(--content-radius);
+  h3 {
+    font-size: var(--title-modal);
+    font-weight: var(--weight-title-modal);
+    margin-bottom: var(--gap-base);
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
