@@ -16,13 +16,17 @@ interface FormProps<T extends FieldValues> {
   initialValues?: DefaultValues<T>;
 }
 
+type FooterProps = {
+  children: ReactNode;
+};
+
 export function Form<T extends FieldValues>({
   children,
   onSubmit,
   initialValues,
   className,
 }: FormProps<T>) {
-  const methods = useForm({
+  const methods = useForm<T>({
     defaultValues: initialValues,
     mode: "onChange",
   });
@@ -30,7 +34,10 @@ export function Form<T extends FieldValues>({
   return (
     <FormProvider {...methods}>
       <form
-        onSubmit={methods.handleSubmit(onSubmit)}
+        onSubmit={methods.handleSubmit((values) => {
+          onSubmit(values);
+          methods.reset();
+        })}
         className={`${styles.form} ${className}`}
       >
         {children}
@@ -38,3 +45,9 @@ export function Form<T extends FieldValues>({
     </FormProvider>
   );
 }
+
+function Footer({ children }: FooterProps) {
+  return <div className={styles.footer}>{children}</div>;
+}
+
+Form.Footer = Footer;

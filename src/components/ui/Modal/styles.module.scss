@@ -13,9 +13,13 @@
 
 .modal {
   width: 100%;
-  max-width: 500px;
   background: var(--bg-surface);
   border-radius: var(--content-radius);
+  h3 {
+    font-size: var(--title-modal);
+    font-weight: var(--weight-title-modal);
+    margin-bottom: var(--gap-base);
+  }
 }
 
 .actions {

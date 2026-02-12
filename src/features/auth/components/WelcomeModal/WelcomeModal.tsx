@@ -29,15 +29,20 @@ export function WelcomeModal({ open, onClose }: Props) {
   };
 
   return (
-    <Modal open={open} dismissible={true} onClose={onClose}>
+    <Modal
+      open={open}
+      title="Welcome to CodeLeap network!"
+      width={500}
+      dismissible={false}
+      onClose={onClose}
+    >
       <div className={styles.wrapper}>
-        <h3>Welcome to CodeLeap network!</h3>
         <Form onSubmit={onFinish}>
           <FormField label="Please enter your username" name="username">
             <TextField name="username" required />
           </FormField>
           <Modal.Actions>
-            <SubmitButton />
+            <SubmitButton title="ENTER" />
           </Modal.Actions>
         </Form>
       </div>

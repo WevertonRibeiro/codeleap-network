@@ -23,12 +23,9 @@ export async function getPosts(): Promise<PaginatedPosts> {
 
 export async function createPost(data: CreatePostDTO) {
   const response = await api.post("/", data);
+  return mapPost(response.data);
+}
 
-  //   const response = await fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(data),
-  //   });
-
-  console.log(response);
+export async function deletePost(id: number) {
+  await api.delete(`/${id}/`);
 }
